@@ -379,23 +379,34 @@ a:hover {
 }
 
 /* =========================================================
-   SLIDESHOW (LANDSCAPE)
+   SLIDESHOW CONTAINERS (FIXED BASE)
    ========================================================= */
 
-.slideshow-container {
+.slideshow-container,
+.slideshow-container-card {
     position: relative;
 
     width: 100%;
-    max-width: 900px;
-
     margin: auto;
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    z-index: 1;
+    align-items: center;
 }
+
+/* LANDSCAPE CONTAINER SIZE */
+.slideshow-container {
+    max-width: 900px;
+}
+
+/* CARD CONTAINER SIZE */
+.slideshow-container-card {
+    max-width: 520px;
+}
+
+/* =========================================================
+   LANDSCAPE IMAGE (RAT TALE)
+   ========================================================= */
 
 .slideshow-container img {
     width: 100%;
@@ -409,24 +420,13 @@ a:hover {
     border: 3px solid rgba(180, 210, 160, 0.35);
 
     box-shadow: 0 0 15px rgba(180, 210, 160, 0.30);
+
+    display: block;
 }
 
 /* =========================================================
-   SLIDESHOW (CARD / PORTRAIT 480x672)
+   CARD IMAGE (CHESS TCG)
    ========================================================= */
-
-.slideshow-container-card {
-    position: relative;
-
-    width: 100%;
-    max-width: 520px;
-
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .slideshow-container-card img {
     width: 480px;
@@ -441,11 +441,10 @@ a:hover {
     box-shadow: 0 0 15px rgba(180, 210, 160, 0.30);
 
     display: block;
-    margin: auto;
 }
 
 /* =========================================================
-   ARROWS (BASE)
+   ARROWS (GLOBAL BASE)
    ========================================================= */
 
 .slide-btn {
@@ -454,55 +453,63 @@ a:hover {
     top: 50%;
     transform: translateY(-50%);
 
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
 
-    border: 2px solid rgba(255, 245, 200, .5);
     border-radius: 50%;
 
-    background-color: rgb(20, 40, 20);
+    border: 2px solid rgba(255, 245, 200, 0.5);
+
+    background-color: rgba(20, 40, 20, 0.85);
 
     color: rgb(235, 220, 160);
 
-    font-size: 28px;
+    font-size: 26px;
+    font-weight: bold;
 
     cursor: pointer;
 
     z-index: 10;
 
-    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 12px rgba(180, 210, 160, 0.25);
+
+    transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
 .slide-btn:hover {
     background-color: #366337;
 
-    box-shadow: 0 0 12px rgba(180, 210, 160, 0.5);
-
     transform: translateY(-50%) scale(1.08);
+
+    box-shadow: 0 0 16px rgba(180, 210, 160, 0.45);
 }
 
 /* =========================================================
-   ARROWS (LANDSCAPE SLIDESHOW)
+   ARROW POSITIONS (LANDSCAPE)
    ========================================================= */
 
 .slideshow-container .left {
-    left: -25px;
+    left: -18px;
 }
 
 .slideshow-container .right {
-    right: -25px;
+    right: -18px;
 }
 
 /* =========================================================
-   ARROWS (CARD SLIDESHOW)
+   ARROW POSITIONS (CARD)
    ========================================================= */
 
 .slideshow-container-card .left {
-    left: -70px;
+    left: -60px;
 }
 
 .slideshow-container-card .right {
-    right: -70px;
+    right: -60px;
 }
 
 /* =========================================================
@@ -574,4 +581,33 @@ a:hover {
 * {
     scrollbar-width: thin;
     scrollbar-color: #4CAF50 #0a0f0a;
+}
+
+/* =========================================================
+   TYPEWRITER CURSOR
+   ========================================================= */
+
+.typewriter {
+    display: inline-block;
+}
+
+/* blinking underscore */
+.typewriter::after {
+    content: "_";
+    margin-left: 2px;
+
+    animation: blink 1s infinite;
+    opacity: 1;
+}
+
+/* cursor disappears when typing is done */
+.typewriter.done::after {
+    content: "";
+}
+
+/* blink animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
