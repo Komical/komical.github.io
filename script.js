@@ -14,8 +14,20 @@ window.addEventListener("DOMContentLoaded", () =>
 
 function initAchievements()
 {
-    const requiredPages = [
-        "about.html", 
+    // reset only once per browser session
+    if (!sessionStorage.getItem("sessionStarted"))
+    {
+        localStorage.clear();
+
+        sessionStorage.setItem(
+            "sessionStarted",
+            "true"
+        );
+    }
+
+    const requiredPages =
+    [
+        "about.html",
         "projects.html",
         "faq.html",
         "index.html",
@@ -23,31 +35,36 @@ function initAchievements()
         "pr_chesstcg.html"
     ];
 
-    const currentPage = window.location.pathname.split("/").pop();
+    const currentPage =
+        window.location.pathname.split("/").pop();
 
-    let visited = JSON.parse(localStorage.getItem("visitedPages")) || [];
+    let visited =
+        JSON.parse(localStorage.getItem("visitedPages")) || [];
 
     if (!visited.includes(currentPage))
     {
         visited.push(currentPage);
-        localStorage.setItem("visitedPages", JSON.stringify(visited));
+
+        localStorage.setItem(
+            "visitedPages",
+            JSON.stringify(visited)
+        );
     }
 
-    const unlocked = localStorage.getItem("achievement_explorer");
+    const unlocked =
+        localStorage.getItem("achievement_explorer");
 
     if (
         requiredPages.every(page => visited.includes(page)) &&
         !unlocked
     )
     {
-        localStorage.setItem("achievement_explorer", "true");
-        showAchievement();
-    }
+        localStorage.setItem(
+            "achievement_explorer",
+            "true"
+        );
 
-    if (!sessionStorage.getItem("sessionStarted"))
-    {
-        localStorage.clear();
-        sessionStorage.setItem("sessionStarted", "true");
+        showAchievement();
     }
 }
 
