@@ -30,7 +30,6 @@ function initAchievements()
         "about.html",
         "projects.html",
         "faq.html",
-        "index.html",
         "pr_rat_tale.html",
         "pr_chesstcg.html"
     ];
