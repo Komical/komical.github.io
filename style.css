@@ -343,7 +343,45 @@ a:hover {
 }
 
 /* =========================================================
-   SLIDESHOW
+   PROJECT TAGS
+   ========================================================= */
+
+.project-tags {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.project-tag {
+    display: inline-block;
+
+    padding: 4px 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+
+    border: 1px solid rgba(255, 245, 200, 0.4);
+    border-radius: 6px;
+
+    background-color: rgba(50, 80, 50, 0.35);
+
+    font-size: 14px;
+
+    color: rgb(200, 220, 190);
+
+    box-shadow: 0 0 6px rgba(180, 210, 160, 0.15);
+
+    transition: 0.15s ease;
+}
+
+.project-tag:hover {
+    background-color: rgba(70, 120, 70, 0.5);
+
+    box-shadow: 0 0 10px rgba(180, 210, 160, 0.35);
+
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   SLIDESHOW (LANDSCAPE)
    ========================================================= */
 
 .slideshow-container {
@@ -357,6 +395,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+
     z-index: 1;
 }
 
@@ -374,7 +413,43 @@ a:hover {
     box-shadow: 0 0 15px rgba(180, 210, 160, 0.30);
 }
 
-/* ARROWS */
+/* =========================================================
+   SLIDESHOW (CARD / PORTRAIT 480x672)
+   ========================================================= */
+
+.slideshow-container-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 520px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow-container-card img {
+    width: 480px;
+    height: 672px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 3px solid rgba(180, 210, 160, 0.35);
+
+    box-shadow: 0 0 15px rgba(180, 210, 160, 0.30);
+
+    display: block;
+    margin: auto;
+}
+
+/* =========================================================
+   ARROWS (BASE)
+   ========================================================= */
+
 .slide-btn {
     position: absolute;
 
@@ -395,7 +470,7 @@ a:hover {
 
     cursor: pointer;
 
-    z-index: 5;
+    z-index: 10;
 
     transition: 0.2s ease;
 }
@@ -408,12 +483,28 @@ a:hover {
     transform: translateY(-50%) scale(1.08);
 }
 
-.left {
+/* =========================================================
+   ARROWS (LANDSCAPE SLIDESHOW)
+   ========================================================= */
+
+.slideshow-container .left {
     left: -25px;
 }
 
-.right {
+.slideshow-container .right {
     right: -25px;
+}
+
+/* =========================================================
+   ARROWS (CARD SLIDESHOW)
+   ========================================================= */
+
+.slideshow-container-card .left {
+    left: -70px;
+}
+
+.slideshow-container-card .right {
+    right: -70px;
 }
 
 /* =========================================================

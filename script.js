@@ -103,10 +103,15 @@ window.changeRatSlide = function(direction)
 
 // CHESS TCG
 const chessSlides = [
-    "images/chess_1.png",
-    "images/chess_2.png",
-    "images/chess_3.png",
-    "images/chess_4.png"
+    "images/ctcg_Advance!.png",
+    "images/ctcg_Advantage!.png",
+    "images/ctcg_Counter!.png",
+    "images/ctcg_Double Attack.png",
+    "images/ctcg_Fork.png",
+    "images/ctcg_Heart Knight.png",
+    "images/ctcg_Opening!.png",
+    "images/ctcg_The London.png",
+    "images/ctcg_Thinking.png"
 ];
 
 let chessIndex = 0;
