@@ -74,15 +74,44 @@ function initAchievements()
 function showAchievement()
 {
     const popup = document.createElement("div");
+
     popup.id = "achievement-popup";
-    popup.innerText = "Achievement Unlocked: Explorer";
+
+    popup.innerHTML = `
+        <div class="achievement-title">
+            ACHIEVEMENT UNLOCKED
+        </div>
+
+        <div class="achievement-name">
+            Explorer
+        </div>
+
+        <div class="achievement-description">
+            Visited all pages on the website.
+        </div>
+
+        <button class="achievement-close">
+            DISMISS
+        </button>
+    `;
 
     document.body.appendChild(popup);
 
-    setTimeout(() =>
+    // manual dismiss
+    popup.querySelector(".achievement-close")
+        .addEventListener("click", () =>
     {
         popup.remove();
-    }, 4000);
+    });
+
+    // auto remove
+    setTimeout(() =>
+    {
+        if (document.body.contains(popup))
+        {
+            popup.remove();
+        }
+    }, 10000);
 }
 
 // =========================================================

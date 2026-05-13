@@ -518,27 +518,112 @@ a:hover {
 
 #achievement-popup {
     position: fixed;
+
     bottom: 100px;
     right: 20px;
+
+    width: 340px;
+
+    padding: 18px;
 
     background: #213f2a;
 
     border: 3px solid rgba(255, 245, 200, .5);
 
-    padding: 15px 25px;
+    box-shadow: 0 0 20px rgba(180, 210, 160, 0.6);
 
-    font-size: 20px;
+    z-index: 9999;
 
-    box-shadow: 0 0 20px rgba(180, 210, 160, 0.8);
+    color: rgb(200, 220, 190);
 
-    animation: fadeInOut 4s ease forwards;
+    animation: achievementFloat 5s ease-in-out infinite,
+               achievementFadeIn 0.25s ease;
 }
 
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(20px); }
-    10% { opacity: 1; transform: translateY(0); }
-    90% { opacity: 1; }
-    100% { opacity: 0; transform: translateY(20px); }
+/* TITLE */
+.achievement-title {
+    font-size: 16px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+
+    color: rgb(235, 220, 160);
+}
+
+/* ACHIEVEMENT NAME */
+.achievement-name {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 0 10px rgba(255, 245, 200, 0.4);
+}
+
+/* DESCRIPTION */
+.achievement-description {
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    margin-bottom: 18px;
+
+    color: rgb(190, 210, 180);
+}
+
+/* BUTTON */
+.achievement-close {
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: #4CAF50;
+
+    border: 2px solid rgba(255, 245, 200, .5);
+
+    color: rgb(235, 220, 160);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    transition: 0.15s ease;
+}
+
+.achievement-close:hover {
+    background-color: #366337;
+
+    box-shadow: 0 0 10px rgba(180, 210, 160, 0.4);
+}
+
+/* FLOATING MOTION */
+@keyframes achievementFloat {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* SPAWN ANIMATION */
+@keyframes achievementFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================================================
