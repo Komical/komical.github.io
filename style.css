@@ -414,3 +414,75 @@ p{
 
     transform: scale(1.03);
 }
+
+/* === SLIDESHOW === */
+
+.slideshow-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow-container img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 3px solid rgba(180, 210, 160, 0.35);
+
+    box-shadow: 0 0 15px rgba(180, 210, 160, 0.30);
+}
+
+/* === ARROWS === */
+
+.slide-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid rgba(255, 245, 200, .5);
+    border-radius: 50%;
+
+    background-color: rgba(20, 40, 20, 0.85);
+
+    color: rgb(235, 220, 160);
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.2s ease;
+}
+
+.slide-btn:hover {
+    background-color: #366337;
+
+    box-shadow: 0 0 12px rgba(180, 210, 160, 0.5);
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+.left {
+    left: -25px;
+}
+
+.right {
+    right: -25px;
+}

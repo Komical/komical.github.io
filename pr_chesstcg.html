@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Developer: Chris Jacoboski -->
+    <title>Chess the Card Game</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header">
+    <h1>Chess the Card Game</h1>
+</div>
+
+<!-- NAV -->
+<div id="header-nav">
+
+    <a href="about.html" class="header-button">
+        About
+    </a>
+
+    <a href="index.html" class="header-button">
+        Index
+    </a>
+
+    <a href="projects.html" class="header-button">
+        Projects
+    </a>
+
+    <a href="pr_chess_tcg.html" class="header-button-current">
+        Chess TCG
+    </a>
+
+</div>
+
+<br>
+
+<div class="project-page">
+
+    <!-- VIDEO -->
+    <div class="box">
+
+        <h2>Gameplay Showcase</h2>
+
+        <br>
+
+        <div class="project-main-video">
+
+            <iframe
+                src="https://www.youtube.com/embed/wIbtHI8x9cs"
+                title="Chess the Card Game"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div class="box">
+
+        <h2>About The Project</h2>
+
+        <br>
+
+        <p>
+            Chess the Card Game is a hybrid strategy project combining
+            traditional chess mechanics with collectible card game systems.
+        </p>
+
+        <br>
+
+        <p>
+            Players build decks, control board space, and use unit-based
+            interactions to outmaneuver opponents.
+        </p>
+
+        <br>
+
+        <p>
+            The project was primarily developed and tested inside Tabletop
+            Simulator with iterative balance updates.
+        </p>
+
+    </div>
+
+    <!-- FEATURES -->
+    <div class="box">
+
+        <h2>Core Features</h2>
+
+        <br>
+
+        <ul class="feature-list">
+            <li>Deck-building strategy system</li>
+            <li>Chess-inspired movement rules</li>
+            <li>Competitive PvP gameplay</li>
+            <li>Board control mechanics</li>
+            <li>Tabletop Simulator prototyping</li>
+            <li>Community testing iteration loop</li>
+        </ul>
+
+    </div>
+
+    <!-- SLIDESHOW -->
+    <div class="box">
+
+        <h2>Development Screenshots</h2>
+
+        <br>
+
+        <div class="slideshow-container">
+
+            <button class="slide-btn left"
+                    onclick="changeChessSlide(-1)">
+                &#10094;
+            </button>
+
+            <img id="chess-slide-image"
+                 src="images/chess_1.png"
+                 alt="Chess TCG Screenshot">
+
+            <button class="slide-btn right"
+                    onclick="changeChessSlide(1)">
+                &#10095;
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- LINKS -->
+    <div class="box">
+
+        <h2>Project Links</h2>
+
+        <br>
+
+        <a href="https://www.youtube.com/@handcraftgames"
+           target="_blank"
+           class="project-link-button">
+           YouTube Channel
+        </a>
+
+        <a href="https://handcraft.games"
+           target="_blank"
+           class="project-link-button">
+           Studio Website
+        </a>
+
+    </div>
+
+</div>
+
+<br><br><br><br><br>
+
+<!-- FOOTER -->
+<div id="footer">
+
+    <a href="https://www.youtube.com/@handcraftgames"
+       target="_blank"
+       class="footer-button">
+       Visit HandCraftGames on YouTube
+    </a>
+
+    <a href="https://discord.gg/q2GaECcfxZ"
+       target="_blank"
+       class="footer-button">
+       Discord
+    </a>
+
+</div>
+
+</body>
+</html>

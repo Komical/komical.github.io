@@ -5,6 +5,7 @@
     <title>A Rats Tale</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -101,11 +102,22 @@ FAQ</a>
 
         <br>
 
-        <div class="screenshot-grid">
+        <div class="slideshow-container">
 
-            <img src="images/rt_lvl3.png" alt="Screenshot 1">
+            <button class="slide-btn left"
+                    onclick="changeRatSlide(-1)">
+                &#10094;
+            </button>
 
-            <img src="images/rt_lvl4.png" alt="Screenshot 2">
+            <img id="slide-image"
+                src="images/rt_lvl1.png"
+                alt="Development Screenshot">
+            </img>
+
+            <button class="slide-btn right"
+                    onclick="changeRatSlide(1)">
+                &#10095;
+            </button>
 
         </div>
 
@@ -134,7 +146,7 @@ FAQ</a>
 
 </div>
 
-<br><br><br><br><br>
+<br><br>
 
 <!-- FOOTER -->
 <div id="footer">

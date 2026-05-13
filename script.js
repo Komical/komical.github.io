@@ -64,3 +64,69 @@ if (!sessionStorage.getItem("sessionStarted")) {
     localStorage.clear();
     sessionStorage.setItem("sessionStarted", "true");
 }
+
+
+// SLIDES /////////////////////////////////////
+
+// RAT TALE
+const ratSlides = [
+    "images/rt_lvl1.png",
+    "images/rt_surreal.png",
+    "images/rt_lvl3.png",
+    "images/rt_lvl4.png",
+    "images/rt_toilet.png"
+];
+
+let ratIndex = 0;
+
+window.changeRatSlide = function(direction)
+{
+    const img = document.getElementById("slide-image");
+    if (!img) return;
+
+    ratIndex += direction;
+
+    if (ratIndex < 0)
+    {
+        ratIndex = ratSlides.length - 1;
+    }
+
+    if (ratIndex >= ratSlides.length)
+    {
+        ratIndex = 0;
+    }
+
+    img.src = ratSlides[ratIndex];
+};
+
+// CHESS TCG
+
+// CHESS TCG
+const chessSlides = [
+    "images/chess_1.png",
+    "images/chess_2.png",
+    "images/chess_3.png",
+    "images/chess_4.png"
+];
+
+let chessIndex = 0;
+
+window.changeChessSlide = function(direction)
+{
+    const img = document.getElementById("chess-slide-image");
+    if (!img) return;
+
+    chessIndex += direction;
+
+    if (chessIndex < 0)
+    {
+        chessIndex = chessSlides.length - 1;
+    }
+
+    if (chessIndex >= chessSlides.length)
+    {
+        chessIndex = 0;
+    }
+
+    img.src = chessSlides[chessIndex];
+};
