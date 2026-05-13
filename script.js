@@ -1,27 +1,3 @@
-// =========================================================
-// TYPEWRITER SYSTEM
-// =========================================================
-
-function typeWriter(el, text, speed = 35)
-{
-    let i = 0;
-
-    function typing()
-    {
-        if (i < text.length)
-        {
-            el.textContent += text.charAt(i);
-            i++;
-            setTimeout(typing, speed);
-        }
-        else
-        {
-            el.classList.add("done");
-        }
-    }
-
-    typing();
-}
 
 // =========================================================
 // INIT (RUN ON PAGE LOAD)
@@ -29,29 +5,8 @@ function typeWriter(el, text, speed = 35)
 
 window.addEventListener("DOMContentLoaded", () =>
 {
-    initTypewriter();
     initAchievements();
 });
-
-// =========================================================
-// TYPEWRITER INIT
-// =========================================================
-
-function initTypewriter()
-{
-    const elements = document.querySelectorAll(".typewriter");
-
-    elements.forEach((el, index) =>
-    {
-        const text = el.textContent;
-        el.textContent = "";
-
-        setTimeout(() =>
-        {
-            typeWriter(el, text, 25);
-        }, index * 300);
-    });
-}
 
 // =========================================================
 // ACHIEVEMENT SYSTEM
@@ -67,7 +22,7 @@ function initAchievements()
         "pr_rat_tale.html",
         "pr_chesstcg.html"
     ];
-    
+
     const currentPage = window.location.pathname.split("/").pop();
 
     let visited = JSON.parse(localStorage.getItem("visitedPages")) || [];
