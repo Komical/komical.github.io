@@ -59,7 +59,15 @@ function initTypewriter()
 
 function initAchievements()
 {
-    const requiredPages = ["about.html", "projects.html"];
+    const requiredPages = [
+        "about.html", 
+        "projects.html",
+        "faq.html",
+        "index.html",
+        "pr_rat_tale.html",
+        "pr_chesstcg.html"
+    ];
+    
     const currentPage = window.location.pathname.split("/").pop();
 
     let visited = JSON.parse(localStorage.getItem("visitedPages")) || [];
