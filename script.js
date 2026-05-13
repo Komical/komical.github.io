@@ -70,7 +70,7 @@ function showAchievement()
 }
 
 // =========================================================
-// SLIDESHOW SYSTEM (GENERIC ENGINE)
+// SLIDESHOW SYSTEM
 // =========================================================
 
 const slideshows =
