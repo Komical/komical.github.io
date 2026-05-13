@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     typeWriter(
         "typed-text",
-        "Hello! My name is Christopher Jacoboski.",
+        "Welcome to Hand Craft Games.",
         35
     );
 });
